@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-05-18T12:32:40Z</date>
+    <date>2017-05-18T12:32:04Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Ruckus ZD1200 Template</template>
-            <name>Ruckus ZD1200 Template</name>
+            <template>HP Server Health Template</template>
+            <name>HP Server Health Template</name>
             <description/>
             <groups>
                 <group>
@@ -19,293 +19,29 @@
             </groups>
             <applications>
                 <application>
-                    <name>Access Points</name>
+                    <name>FAN Health</name>
                 </application>
                 <application>
-                    <name>Rogue AP</name>
+                    <name>Memory Health</name>
                 </application>
                 <application>
-                    <name>Users</name>
+                    <name>Power Health</name>
                 </application>
                 <application>
-                    <name>WLANs</name>
+                    <name>Storage Health</name>
                 </application>
                 <application>
-                    <name>ZD General Informations</name>
-                </application>
-                <application>
-                    <name>ZD Interfaces</name>
-                </application>
-                <application>
-                    <name>ZD Performances</name>
+                    <name>System Health</name>
                 </application>
             </applications>
             <items>
                 <item>
-                    <name>ZoneDirector CPU Utilization</name>
+                    <name>Global System Health</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.5.58.0</snmp_oid>
-                    <key>ruckusZDSystemCPUUTIL.0</key>
-                    <delay>300</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units>%</units>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD Performances</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDIrector Licensed AP</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.12.0</snmp_oid>
-                    <key>ruckusZDSystemLicensedAP.0</key>
-                    <delay>3600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD General Informations</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector MAC Adress</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.3.0</snmp_oid>
-                    <key>ruckusZDSystemMacAddr.0</key>
-                    <delay>86400</delay>
-                    <history>90</history>
-                    <trends>0</trends>
-                    <status>0</status>
-                    <value_type>1</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>12</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD General Informations</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector Memory Utilization</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.5.59.0</snmp_oid>
-                    <key>ruckusZDSystemMemUTIL.0</key>
-                    <delay>300</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units>%</units>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD Performances</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector System Model</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.9.0</snmp_oid>
-                    <key>ruckusZDSystemModel.0</key>
-                    <delay>86400</delay>
-                    <history>90</history>
-                    <trends>0</trends>
-                    <status>0</status>
-                    <value_type>1</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>29</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD General Informations</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector System Name</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.1.0</snmp_oid>
-                    <key>ruckusZDSystemName.0</key>
-                    <delay>86400</delay>
-                    <history>90</history>
-                    <trends>0</trends>
-                    <status>0</status>
-                    <value_type>1</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>3</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD General Informations</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector Peer Status</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.31.0</snmp_oid>
-                    <key>ruckusZDSystemPeerStatus.0</key>
+                    <snmp_oid>1.3.6.1.4.1.232.6.1.3.0</snmp_oid>
+                    <key>cpqHeMibCondition</key>
                     <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -336,148 +72,19 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>ZD Performances</name>
+                            <name>System Health</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>ZoneDirector Serial Number</name>
+                    <name>Memory Status</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.15.0</snmp_oid>
-                    <key>ruckusZDSystemSerialNumber.0</key>
-                    <delay>86400</delay>
-                    <history>90</history>
-                    <trends>0</trends>
-                    <status>0</status>
-                    <value_type>1</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>8</inventory_link>
-                    <applications>
-                        <application>
-                            <name>ZD General Informations</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector Total Users</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.15.30.0</snmp_oid>
-                    <key>ruckusZDSystemStatsAllNumSta</key>
-                    <delay>3600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units>Users</units>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>Users</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector Total Auth Clients</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.15.2.0</snmp_oid>
-                    <key>ruckusZDSystemStatsNumSta.0</key>
-                    <delay>3600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units>Users</units>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>Users</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>ZoneDirector Status</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.30.0</snmp_oid>
-                    <key>ruckusZDSystemStatus.0</key>
+                    <snmp_oid>1.3.6.1.4.1.232.6.2.14.4.0</snmp_oid>
+                    <key>cpqHeResilientMemCondition</key>
                     <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -508,24 +115,75 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>ZD Performances</name>
+                            <name>Memory Health</name>
+                        </application>
+                        <application>
+                            <name>System Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>HP Insight System Status</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Total Memory Size</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.232.6.2.14.8</snmp_oid>
+                    <key>cpqHeResilientMemTotalMemSize</key>
+                    <delay>21600</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>MB</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Memory Health</name>
+                        </application>
+                        <application>
+                            <name>System Health</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>ZoneDirector System Version</name>
+                    <name>Advanced Memory Protection type</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.1.18.0</snmp_oid>
-                    <key>ruckusZDSystemVersion.0</key>
-                    <delay>86400</delay>
+                    <snmp_oid>1.3.6.1.4.1.232.6.2.14.1.0</snmp_oid>
+                    <key>cpqHeResilientMemTypeActive</key>
+                    <delay>300</delay>
                     <history>90</history>
-                    <trends>0</trends>
+                    <trends>365</trends>
                     <status>0</status>
-                    <value_type>1</value_type>
+                    <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -548,24 +206,125 @@
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
                     <description/>
-                    <inventory_link>5</inventory_link>
+                    <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>ZD General Informations</name>
+                            <name>Memory Health</name>
+                        </application>
+                        <application>
+                            <name>System Health</name>
                         </application>
                     </applications>
-                    <valuemap/>
+                    <valuemap>
+                        <name>HP Memory Protection Types</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Overall Thermal Status</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.232.6.2.6.1.0</snmp_oid>
+                    <key>cpqHeThermalCondition</key>
+                    <delay>300</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>FAN Health</name>
+                        </application>
+                        <application>
+                            <name>System Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>HP Insight System Status</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Fan Status</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.232.6.2.6.4.0</snmp_oid>
+                    <key>cpqHeThermalSystemFanStatus</key>
+                    <delay>300</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>FAN Health</name>
+                        </application>
+                        <application>
+                            <name>System Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>HP Insight System Status</name>
+                    </valuemap>
                     <logtimefmt/>
                 </item>
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>Ruckus APs</name>
+                    <name>RAID Controller</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.2]</snmp_oid>
-                    <key>AP-[{#SNMPVALUE}]</key>
-                    <delay>3600</delay>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.232.3.2.2.1.1.1]</snmp_oid>
+                    <key>cpqDaCntlrIndex-[{#SNMPVALUE}]</key>
+                    <delay>86400</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -589,21 +348,21 @@
                         <formula/>
                         <conditions/>
                     </filter>
-                    <lifetime>1</lifetime>
+                    <lifetime>30</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>AP $1 IP Address</name>
+                            <name>RAID Controller $1 Status</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.10.{#SNMPINDEX}</snmp_oid>
-                            <key>ruckusZDWLANAPIPAdd[{#SNMPVALUE}]</key>
-                            <delay>3600</delay>
+                            <snmp_oid>1.3.6.1.4.1.232.3.2.2.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrCondition[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
                             <history>90</history>
-                            <trends>0</trends>
+                            <trends>365</trends>
                             <status>0</status>
-                            <value_type>4</value_type>
+                            <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
                             <delta>0</delta>
@@ -629,65 +388,109 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Access Points</name>
+                                    <name>Storage Health</name>
                                 </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>AP $1 Nb Clients</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.15.{#SNMPINDEX}</snmp_oid>
-                            <key>ruckusZDWLANAPNumSta[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units>Users</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
                                 <application>
-                                    <name>Users</name>
+                                    <name>System Health</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>HP Insight System Status</name>
+                            </valuemap>
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqDaCntlrCondition[{#SNMPVALUE}].last()}=1</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqDaCntlrCondition[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>RAID Controller [{#SNMPVALUE}] need  check (Other)</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqDaCntlrCondition[{#SNMPVALUE}].last()}&gt;2</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqDaCntlrCondition[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>RAID Controller  [{#SNMPVALUE}] not OK</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>HDD Bay</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.232.3.2.5.1.1.5]</snmp_oid>
+                    <key>cpqDaPhyDrvBay-[{#SNMPVALUE}]</key>
+                    <delay>86400</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes>
                         <item_prototype>
-                            <name>AP $1 Status</name>
+                            <name>HDD in bay $1 Serial</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
-                            <snmp_oid>.1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.3.{#SNMPINDEX}</snmp_oid>
-                            <key>ruckusZDWLANAPStatus[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
+                            <snmp_oid>.1.3.6.1.4.1.232.3.2.5.1.1.51.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvSerialNum[{#SNMPVALUE}]</key>
+                            <delay>21600</delay>
                             <history>90</history>
                             <trends>0</trends>
                             <status>0</status>
@@ -717,23 +520,24 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Access Points</name>
+                                    <name>Storage Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
                                 </application>
                             </applications>
-                            <valuemap>
-                                <name>RuckusAPStatus</name>
-                            </valuemap>
+                            <valuemap/>
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>AP $1 detected Rogue AP</name>
+                            <name>HDD in bay $1 Status</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.16.{#SNMPINDEX}</snmp_oid>
-                            <key>ruckusZDWLANRogue[{#SNMPVALUE}]</key>
-                            <delay>3600</delay>
+                            <snmp_oid>.1.3.6.1.4.1.232.3.2.5.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvStatus[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -763,42 +567,25 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>Rogue AP</name>
+                                    <name>Storage Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>HP Physical Drive Status</name>
+                            </valuemap>
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:ruckusZDWLANRogue[{#SNMPVALUE}].last()}&gt;0</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>Acces Point {#SNMPVALUE} detect Rogue APs</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>1</status>
-                            <priority>1</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>1</manual_close>
-                            <dependencies>
-                                <dependency>
-                                    <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
-                                    <recovery_expression/>
-                                </dependency>
-                            </dependencies>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:ruckusZDWLANAPIPAdd[{#SNMPVALUE}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>Acces Point {#SNMPVALUE} IP address modified</name>
+                            <expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=1</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>Check HDD in bay [{#SNMPVALUE}] status (Other)</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -810,17 +597,83 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}=0</expression>
+                            <expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}&gt;4</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>HDD in bay [{#SNMPVALUE}] Erasing</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=3</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>HDD in bay [{#SNMPVALUE}] Failure</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqDaPhyDrvSerialNum[{#SNMPVALUE}].diff()}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>Acces Point {#SNMPVALUE} is Offline</name>
+                            <name>HDD in bay [{#SNMPVALUE}] has been replaced</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=4</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqDaPhyDrvStatus[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>HDD in bay [{#SNMPVALUE}] has predictive failure</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -832,7 +685,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -843,12 +696,12 @@
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
-                    <name>WLANs</name>
+                    <name>Power Supply Bay</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.1]</snmp_oid>
-                    <key>RuckusZDWLANSSID-[{#SNMPVALUE}]</key>
-                    <delay>3600</delay>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.232.6.2.9.3.1.2]</snmp_oid>
+                    <key>cpqHeFltTolPowerSupplyBay-[{#SNMPVALUE}]</key>
+                    <delay>86400</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -876,59 +729,15 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>$1 Authentication method</name>
+                            <name>Power Supply $1 Max Watts</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.3.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANAuth[{#SNMPVALUE}]</key>
-                            <delay>3600</delay>
+                            <snmp_oid>1.3.6.1.4.1.232.6.2.9.3.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqHeFltTolPowerSupplyCapacityMaximum[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
                             <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>WLANs</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>$1 SSID Hidden</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.6.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANBcastSSID[{#SNMPVALUE}]</key>
-                            <delay>3600</delay>
-                            <history>90</history>
-                            <trends>0</trends>
+                            <trends>365</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -956,110 +765,166 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>WLANs</name>
+                                    <name>Power Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Power Supply $1 Capacity Usage</name>
+                            <type>15</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>cpqHeFltTolPowerSupplyCapacityUsedPerc[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>%</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params>last(cpqHeFltTolPowerSupplyCapacityUsed[{#SNMPVALUE}])/(last(cpqHeFltTolPowerSupplyCapacityMaximum[{#SNMPVALUE}])/100)</params>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Power Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Power Supply $1 Used Watts</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.232.6.2.9.3.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqHeFltTolPowerSupplyCapacityUsed[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Power Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Power Supply $1 Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.232.6.2.9.3.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqHeFltTolPowerSupplyCondition[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Power Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>Ruckus ZD 1200 BcastSSID</name>
+                                <name>HP Insight System Status</name>
                             </valuemap>
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>$1 Description</name>
+                            <name>Power Supply $1 Voltage</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.2.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANDesc[{#SNMPVALUE}]</key>
-                            <delay>86400</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>WLANs</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>$1 Encryption Type</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANEnc[{#SNMPVALUE}]</key>
-                            <delay>3600</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>WLANs</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>$1 Nb AP</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.11.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANNumAP[{#SNMPVALUE}]</key>
+                            <snmp_oid>1.3.6.1.4.1.232.6.2.9.3.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
@@ -1090,7 +955,10 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>WLANs</name>
+                                    <name>Power Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -1098,12 +966,12 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>$1 Nb Client</name>
+                            <name>Power Supply $1 Presence</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.12.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANNumClients[{#SNMPVALUE}]</key>
+                            <snmp_oid>1.3.6.1.4.1.232.6.2.9.3.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqHeFltTolPowerSupplyPresent[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>
@@ -1134,99 +1002,63 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>WLANs</name>
+                                    <name>Power Health</name>
                                 </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>$1 Nb Device Capacity Disassociation</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.38.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANNumDCDisassociation[{#SNMPVALUE}]</key>
-                            <delay>900</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
                                 <application>
-                                    <name>WLANs</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>$1 Type</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.2.1.1.1.1.1.5.{#SNMPINDEX}</snmp_oid>
-                            <key>RuckusZDWLANType[{#SNMPVALUE}]</key>
-                            <delay>3600</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>WLANs</name>
+                                    <name>System Health</name>
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>Ruckus ZD1200 WLAN Type</name>
+                                <name>HP Power Supply Presence</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Power Supply $1 Redundancy</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.232.6.2.9.3.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqHeFltTolPowerSupplyRedundant[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Power Health</name>
+                                </application>
+                                <application>
+                                    <name>System Health</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>HP Power Supply Redundancy</name>
                             </valuemap>
                             <logtimefmt/>
                             <application_prototypes/>
@@ -1234,10 +1066,54 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:RuckusZDWLANNumAP[{#SNMPVALUE}].change()}&gt;0</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>AP added to WLAN {#SNMPVALUE}</name>
+                            <expression>{HP Server Health Template:cpqHeFltTolPowerSupplyRedundant[{#SNMPVALUE}].last()}=2</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqHeFltTolPowerSupplyRedundant[{#SNMPVALUE}].last()}=3</recovery_expression>
+                            <name>Power Supply [{#SNMPVALUE}] has no redundancy.</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>1</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}].last()}&gt;240</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}].last()}&gt;220 and {HP Server Health Template:cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}].last()}&lt;240</recovery_expression>
+                            <name>Power Supply [{#SNMPVALUE}] high input voltage</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{HP Server Health Template:cpqHeFltTolPowerSupplyCapacityUsedPerc[{#SNMPVALUE}].avg(15m)}&gt;75</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqHeFltTolPowerSupplyCapacityUsedPerc[{#SNMPVALUE}].avg(15m)}&lt;75</recovery_expression>
+                            <name>Power Supply [{#SNMPVALUE}] High Usage</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -1249,117 +1125,51 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:RuckusZDWLANNumAP[{#SNMPVALUE}].change()}&lt;0</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>AP removed from WLAN {#SNMPVALUE}</name>
+                            <expression>{HP Server Health Template:cpqHeFltTolPowerSupplyCondition[{#SNMPVALUE}].last()}&gt;2</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqHeFltTolPowerSupplyCondition[{#SNMPVALUE}].last()}=2</recovery_expression>
+                            <name>Power Supply [{#SNMPVALUE}] is not OK</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
-                            <priority>1</priority>
+                            <priority>2</priority>
                             <description/>
                             <type>0</type>
                             <manual_close>1</manual_close>
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:RuckusZDWLANNumDCDisassociation[{#SNMPVALUE}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>WLAN {#SNMPVALUE} : Devices capacity exceeded</name>
+                            <expression>{HP Server Health Template:cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}].last()}&lt;220</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{HP Server Health Template:cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}].last()}&gt;220 and {HP Server Health Template:cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}].last()}&lt;240</recovery_expression>
+                            <name>Power Supply [{#SNMPVALUE}] low input voltage</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
-                            <priority>3</priority>
+                            <priority>2</priority>
                             <description/>
                             <type>0</type>
                             <manual_close>1</manual_close>
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
-                                    <recovery_expression/>
-                                </dependency>
-                            </dependencies>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:RuckusZDWLANAuth[{#SNMPVALUE}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>WLAN {#SNMPVALUE} Authentication Method has been changed</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>1</manual_close>
-                            <dependencies>
-                                <dependency>
-                                    <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
-                                    <recovery_expression/>
-                                </dependency>
-                            </dependencies>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:RuckusZDWLANEnc[{#SNMPVALUE}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>WLAN {#SNMPVALUE} Encryption Mode has been changed</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>1</manual_close>
-                            <dependencies>
-                                <dependency>
-                                    <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
-                                    <recovery_expression/>
-                                </dependency>
-                            </dependencies>
-                            <tags/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:RuckusZDWLANBcastSSID[{#SNMPVALUE}].diff()}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>WLAN {#SNMPVALUE} SSID Visibility has been changed</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>1</manual_close>
-                            <dependencies>
-                                <dependency>
-                                    <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
+                                    <expression>{HP Server Health Template:icmpping.max(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -1368,7 +1178,39 @@
                     </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>Nb Clients connected to WLAN {#SNMPVALUE}</name>
+                            <name>Power Supply {#SNMPVALUE} input voltage</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>200.0000</yaxismin>
+                            <yaxismax>260.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>CC0000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>HP Server Health Template</host>
+                                        <key>cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Power Supply {#SNMPVALUE} Usage Level</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -1380,133 +1222,26 @@
                             <show_3d>0</show_3d>
                             <percent_left>0.0000</percent_left>
                             <percent_right>0.0000</percent_right>
-                            <ymin_type_1>0</ymin_type_1>
-                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
                             <ymin_item_1>0</ymin_item_1>
                             <ymax_item_1>0</ymax_item_1>
                             <graph_items>
                                 <graph_item>
                                     <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>1A7C11</color>
+                                    <drawtype>5</drawtype>
+                                    <color>00BB00</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Ruckus ZD1200 Template</host>
-                                        <key>RuckusZDWLANNumClients[{#SNMPVALUE}]</key>
+                                        <host>HP Server Health Template</host>
+                                        <key>cpqHeFltTolPowerSupplyCapacityUsedPerc[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
                         </graph_prototype>
                     </graph_prototypes>
-                    <host_prototypes/>
-                </discovery_rule>
-                <discovery_rule>
-                    <name>ZD Interfaces</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.25053.1.2.1.1.1.18.2.1.2]</snmp_oid>
-                    <key>ZDEthName[{#SNMPVALUE}]</key>
-                    <delay>86400</delay>
-                    <status>0</status>
-                    <allowed_hosts/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <filter>
-                        <evaltype>0</evaltype>
-                        <formula/>
-                        <conditions/>
-                    </filter>
-                    <lifetime>1</lifetime>
-                    <description/>
-                    <item_prototypes>
-                        <item_prototype>
-                            <name>Status $1</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.4.1.25053.1.2.1.1.1.18.2.1.5.{#SNMPINDEX}</snmp_oid>
-                            <key>ruckusZDEthStatus[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>ZD Interfaces</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>ruckusZDEthStatus</name>
-                            </valuemap>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                    </item_prototypes>
-                    <trigger_prototypes>
-                        <trigger_prototype>
-                            <expression>{Ruckus ZD1200 Template:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>Port {#SNMPVALUE} is Down</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
-                            <url/>
-                            <status>0</status>
-                            <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <manual_close>0</manual_close>
-                            <dependencies>
-                                <dependency>
-                                    <name>{HOST.NAME} is unavailable by ICMP</name>
-                                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
-                                    <recovery_expression/>
-                                </dependency>
-                            </dependencies>
-                            <tags/>
-                        </trigger_prototype>
-                    </trigger_prototypes>
-                    <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
@@ -1520,202 +1255,133 @@
             <screens/>
         </template>
     </templates>
-    <triggers>
-        <trigger>
-            <expression>{Ruckus ZD1200 Template:ruckusZDSystemLicensedAP.0.diff()}=1</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
-            <name>Number of Licensed AP change on {HOST.NAME}</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <manual_close>1</manual_close>
-            <dependencies>
-                <dependency>
-                    <name>{HOST.NAME} is unavailable by ICMP</name>
-                    <expression>{Ruckus ZD1200 Template:icmpping.max(#3)}=0</expression>
-                    <recovery_expression/>
-                </dependency>
-            </dependencies>
-            <tags/>
-        </trigger>
-    </triggers>
-    <graphs>
-        <graph>
-            <name>Total Users</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>EE0000</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Ruckus ZD1200 Template</host>
-                        <key>ruckusZDSystemStatsAllNumSta</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>3333FF</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Ruckus ZD1200 Template</host>
-                        <key>ruckusZDSystemStatsNumSta.0</key>
-                    </item>
-                </graph_item>
-            </graph_items>
-        </graph>
-        <graph>
-            <name>ZoneDirector CPU Utilization</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>FF3333</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Ruckus ZD1200 Template</host>
-                        <key>ruckusZDSystemCPUUTIL.0</key>
-                    </item>
-                </graph_item>
-            </graph_items>
-        </graph>
-        <graph>
-            <name>ZoneDirector Memory Usage</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>5</drawtype>
-                    <color>1A7C11</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Ruckus ZD1200 Template</host>
-                        <key>ruckusZDSystemMemUTIL.0</key>
-                    </item>
-                </graph_item>
-            </graph_items>
-        </graph>
-    </graphs>
     <value_maps>
         <value_map>
-            <name>RuckusAPStatus</name>
+            <name>HP Insight System Status</name>
             <mappings>
                 <mapping>
-                    <value>0</value>
-                    <newvalue>Disconnected</newvalue>
-                </mapping>
-                <mapping>
                     <value>1</value>
-                    <newvalue>Connected</newvalue>
+                    <newvalue>Other</newvalue>
                 </mapping>
                 <mapping>
                     <value>2</value>
-                    <newvalue>ApprovalPending</newvalue>
+                    <newvalue>OK</newvalue>
                 </mapping>
                 <mapping>
                     <value>3</value>
-                    <newvalue>UpgradingFirmware</newvalue>
+                    <newvalue>Degraded</newvalue>
                 </mapping>
                 <mapping>
                     <value>4</value>
-                    <newvalue>Provisioning</newvalue>
+                    <newvalue>Failure</newvalue>
                 </mapping>
             </mappings>
         </value_map>
         <value_map>
-            <name>Ruckus ZD 1200 BcastSSID</name>
+            <name>HP Memory Protection Types</name>
             <mappings>
                 <mapping>
                     <value>1</value>
-                    <newvalue>Hidden</newvalue>
+                    <newvalue>Other</newvalue>
                 </mapping>
                 <mapping>
                     <value>2</value>
-                    <newvalue>Visible</newvalue>
+                    <newvalue>None</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Online Spare</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Mirrored</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Advanced ECC</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Mirrored Single Board</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Mirrored Dual Board</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>XOR</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>LockStep</newvalue>
                 </mapping>
             </mappings>
         </value_map>
         <value_map>
-            <name>Ruckus ZD1200 WLAN Type</name>
+            <name>HP Physical Drive Status</name>
             <mappings>
                 <mapping>
                     <value>1</value>
-                    <newvalue>Guest access</newvalue>
+                    <newvalue>Other</newvalue>
                 </mapping>
                 <mapping>
                     <value>2</value>
-                    <newvalue>Private access</newvalue>
+                    <newvalue>OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Predictive Failure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Erasing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Erase Done</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Erase Pending</newvalue>
                 </mapping>
             </mappings>
         </value_map>
         <value_map>
-            <name>ruckusZDEthStatus</name>
+            <name>HP Power Supply Presence</name>
             <mappings>
                 <mapping>
                     <value>1</value>
-                    <newvalue>Up</newvalue>
+                    <newvalue>Other</newvalue>
                 </mapping>
                 <mapping>
                     <value>2</value>
-                    <newvalue>Down</newvalue>
+                    <newvalue>Absent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Present</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>HP Power Supply Redundancy</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Not Redundant</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Redundant</newvalue>
                 </mapping>
             </mappings>
         </value_map>
